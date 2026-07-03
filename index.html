@@ -4,20 +4,96 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Andrea Prestia | Software Engineer</title>
+  <title>Andrea Prestia | Senior Software Engineer · .NET, APIs & Cloud Integrations</title>
 
   <meta
     name="description"
-    content="Andrea Prestia — Senior Software Engineer based in Rome, Italy. I design and build reliable backend systems, enterprise APIs, integrations, cloud architectures, and AI-assisted software workflows."
+    content="Andrea Prestia is a Senior Software Engineer based in Rome, Italy, specializing in .NET, enterprise APIs, backend systems, integrations, cloud-ready architectures, and AI-assisted development workflows."
   />
 
-  <meta property="og:title" content="Andrea Prestia | Software Engineer" />
+  <link rel="canonical" href="https://prestia.dev/" />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Andrea Prestia" />
+  <meta name="theme-color" content="#050816" />
+
+  <meta property="og:title" content="Andrea Prestia | Senior Software Engineer" />
   <meta
     property="og:description"
-    content="Senior Software Engineer focused on backend systems, enterprise integrations, cloud architectures, and AI-assisted development."
+    content="Senior Software Engineer focused on .NET backend systems, enterprise APIs, integrations, cloud-ready architectures, and AI-assisted development."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://prestia.dev" />
+  <meta property="og:url" content="https://prestia.dev/" />
+  <meta property="og:site_name" content="Andrea Prestia" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://prestia.dev/og-image.png" />
+  <meta property="og:image:alt" content="Andrea Prestia — Senior Software Engineer" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Andrea Prestia | Senior Software Engineer" />
+  <meta
+    name="twitter:description"
+    content="Senior Software Engineer focused on .NET backend systems, enterprise APIs, integrations, cloud-ready architectures, and AI-assisted development."
+  />
+  <meta name="twitter:image" content="https://prestia.dev/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://prestia.dev/#person",
+        "name": "Andrea Prestia",
+        "url": "https://prestia.dev/",
+        "email": "mailto:andrea@prestia.dev",
+        "jobTitle": "Senior Software Engineer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Rome",
+          "addressCountry": "IT"
+        },
+        "sameAs": [
+          "https://github.com/AndreaPrestia",
+          "https://www.codewars.com/users/APrs",
+          "https://sniper-soft.com",
+          "https://accanto.care"
+        ],
+        "worksFor": {
+          "@id": "https://prestia.dev/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://prestia.dev/#organization",
+        "name": "PRESTIA.DEV S.A.S. DI PRESTIA ANDREA",
+        "url": "https://prestia.dev/",
+        "email": "mailto:andrea@prestia.dev",
+        "vatID": "IT17486541000",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Viale Bruno Rizzieri 199C",
+          "postalCode": "00173",
+          "addressLocality": "Rome",
+          "addressCountry": "IT"
+        },
+        "sameAs": [
+          "https://sniper-soft.com",
+          "https://github.com/AndreaPrestia"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://prestia.dev/#website",
+        "url": "https://prestia.dev/",
+        "name": "Andrea Prestia",
+        "publisher": {
+          "@id": "https://prestia.dev/#organization"
+        }
+      }
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -69,6 +145,23 @@
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -48px;
+      z-index: 999;
+      background: #ffffff;
+      color: #020617;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: top 180ms ease;
+    }
+
+    .skip-link:focus {
+      top: 16px;
     }
 
     .page {
@@ -562,9 +655,11 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header>
     <nav class="nav" aria-label="Main navigation">
-      <a class="brand" href="/">
+      <a class="brand" href="/" aria-label="Andrea Prestia homepage">
         <span class="brand-mark">AP</span>
         <span>Andrea Prestia</span>
       </a>
@@ -580,7 +675,7 @@
     </nav>
   </header>
 
-  <main class="page">
+  <main id="main-content" class="page">
     <section class="hero">
       <div class="hero-grid">
         <div class="hero-card">
@@ -589,7 +684,7 @@
           <h1>Building reliable software systems.</h1>
 
           <p class="lead">
-            I design and build backend platforms, enterprise APIs, integrations,
+            I design and build .NET backend platforms, enterprise APIs, integrations,
             cloud-ready architectures, and AI-assisted development workflows.
           </p>
 
@@ -613,12 +708,12 @@
           <div class="stats">
             <div class="stat">
               <strong>Enterprise software</strong>
-              <span>APIs, integrations, backend systems</span>
+              <span>.NET APIs, integrations, backend systems</span>
             </div>
 
             <div class="stat">
-              <strong>Modernization</strong>
-              <span>Legacy codebases, cloud migration, architecture</span>
+              <strong>Legacy modernization</strong>
+              <span>Codebases, cloud migration, architecture</span>
             </div>
 
             <div class="stat">
@@ -641,15 +736,15 @@
 
       <div class="cards">
         <article class="card">
-          <h3>Backend systems</h3>
+          <h3>.NET backend systems</h3>
           <p>
-            Robust services, APIs, business workflows, data access layers, authentication,
+            Robust services, REST APIs, business workflows, data access layers, authentication,
             observability, and production-oriented application design.
           </p>
 
           <div class="tag-list">
             <span class="tag">.NET</span>
-            <span class="tag">APIs</span>
+            <span class="tag">REST APIs</span>
             <span class="tag">SQL</span>
           </div>
         </article>
@@ -657,8 +752,8 @@
         <article class="card">
           <h3>Enterprise integrations</h3>
           <p>
-            Connecting legacy platforms, external services, databases, queues, and internal
-            systems with clean contracts and maintainable architecture.
+            Connecting legacy platforms, Oracle databases, SQL Server systems, queues,
+            external services, and internal tools with clean contracts and maintainable architecture.
           </p>
 
           <div class="tag-list">
@@ -672,7 +767,7 @@
           <h3>AI-augmented development</h3>
           <p>
             I use AI and agent-based workflows as a productivity and quality multiplier,
-            while keeping ownership of architecture, code quality, and technical decisions.
+            while keeping ownership of architecture, code quality, testing, and technical decisions.
           </p>
 
           <div class="tag-list">
@@ -698,8 +793,8 @@
             <div class="project-kicker">Software company</div>
             <h3>SniperSoft</h3>
             <p>
-              Specialized software development for companies that need reliable systems,
-              enterprise integrations, backend platforms, and pragmatic technical execution.
+              Specialized software development for companies that need reliable backend systems,
+              enterprise integrations, cloud-ready architectures, APIs, and pragmatic technical execution.
             </p>
           </div>
 
@@ -711,7 +806,7 @@
             <div class="project-kicker">Care-tech project</div>
             <h3>Accanto</h3>
             <p>
-              A project focused on making caregiving more organized, humane, and accessible
+              A care-tech project focused on making caregiving more organized, humane, and accessible
               through simple digital tools for families and caregivers.
             </p>
           </div>
@@ -741,10 +836,10 @@
         </p>
 
         <p>
-          I’m particularly interested in building reliable backend systems, modernizing legacy codebases,
-          and designing scalable architectures. I use AI-augmented development and agent-based workflows
-          as a productivity and quality multiplier, while keeping full ownership of system design
-          and technical decisions.
+          I’m particularly interested in building reliable .NET backend systems, modernizing legacy codebases,
+          integrating enterprise platforms, and designing scalable cloud-ready architectures.
+          I use AI-augmented development and agent-based workflows as a productivity and quality multiplier,
+          while keeping full ownership of system design and technical decisions.
         </p>
       </div>
     </section>
@@ -790,7 +885,7 @@
         <h2>Let’s build something solid.</h2>
         <p>
           I’m interested in software projects where reliability, architecture,
-          integrations, and pragmatic delivery matter.
+          integrations, backend engineering, and pragmatic delivery matter.
         </p>
 
         <div class="actions" style="justify-content: center;">
