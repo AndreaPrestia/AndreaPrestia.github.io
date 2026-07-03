@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Andrea Prestia | Software Engineer</title>
+
+  <meta
+    name="description"
+    content="Andrea Prestia — Senior Software Engineer based in Rome, Italy. I design and build reliable backend systems, enterprise APIs, integrations, cloud architectures, and AI-assisted software workflows."
+  />
+
+  <meta property="og:title" content="Andrea Prestia | Software Engineer" />
+  <meta
+    property="og:description"
+    content="Senior Software Engineer focused on backend systems, enterprise integrations, cloud architectures, and AI-assisted development."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://prestia.dev" />
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-soft: #0b1020;
+      --card: rgba(255, 255, 255, 0.06);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --text: #f8fafc;
+      --muted: #a5b4c8;
+      --muted-2: #708099;
+      --accent: #7dd3fc;
+      --accent-2: #c084fc;
+      --white: #ffffff;
+      --shadow: 0 24px 90px rgba(0, 0, 0, 0.35);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 10%, rgba(125, 211, 252, 0.20), transparent 30%),
+        radial-gradient(circle at 80% 0%, rgba(192, 132, 252, 0.18), transparent 34%),
+        radial-gradient(circle at 50% 80%, rgba(59, 130, 246, 0.10), transparent 42%),
+        var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(16px);
+      background: rgba(5, 8, 22, 0.68);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(135deg, rgba(125, 211, 252, 0.95), rgba(192, 132, 252, 0.95));
+      color: #020617;
+      font-weight: 900;
+      box-shadow: 0 12px 28px rgba(125, 211, 252, 0.18);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      transition: color 180ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .hero {
+      padding: 96px 0 56px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .hero-card {
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
+      box-shadow: var(--shadow);
+      padding: clamp(32px, 6vw, 64px);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 999px;
+      right: -120px;
+      top: -120px;
+      background: rgba(125, 211, 252, 0.12);
+      filter: blur(8px);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 800;
+      font-size: 0.78rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 6.6rem);
+      line-height: 0.92;
+      letter-spacing: -0.08em;
+      margin: 0 0 26px;
+      max-width: 780px;
+    }
+
+    .lead {
+      font-size: clamp(1.12rem, 2vw, 1.38rem);
+      color: #dbeafe;
+      max-width: 780px;
+      margin: 0 0 34px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: var(--white);
+      font-weight: 800;
+      transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        background 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.32);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .button.primary {
+      background: var(--white);
+      color: #020617;
+      border-color: var(--white);
+    }
+
+    .button.primary:hover {
+      background: #dbeafe;
+    }
+
+    .side-card {
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.045);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100%;
+    }
+
+    .side-card h2 {
+      margin: 0 0 14px;
+      font-size: 1.1rem;
+      letter-spacing: -0.03em;
+    }
+
+    .side-card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .stats {
+      display: grid;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .stat {
+      padding: 18px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.15rem;
+      color: var(--white);
+      letter-spacing: -0.03em;
+    }
+
+    .stat span {
+      color: var(--muted-2);
+      font-size: 0.92rem;
+    }
+
+    section {
+      padding: 40px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 22px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+      margin: 0;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      background: var(--card);
+      padding: 26px;
+      min-height: 220px;
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 1.2rem;
+      letter-spacing: -0.03em;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      color: #dbeafe;
+      background: rgba(125, 211, 252, 0.10);
+      border: 1px solid rgba(125, 211, 252, 0.18);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
+      padding: 32px;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        background 180ms ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.24);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.095), rgba(255, 255, 255, 0.045));
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -90px -120px auto;
+      width: 260px;
+      height: 260px;
+      border-radius: 999px;
+      background: rgba(192, 132, 252, 0.12);
+      pointer-events: none;
+    }
+
+    .project-kicker {
+      color: var(--accent);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .project-card h3 {
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+      margin: 0 0 16px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      margin: 0;
+      max-width: 520px;
+    }
+
+    .project-link {
+      margin-top: 28px;
+      font-weight: 900;
+      color: var(--white);
+    }
+
+    .about {
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.045);
+      padding: clamp(28px, 5vw, 48px);
+    }
+
+    .about p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin: 0 0 18px;
+      max-width: 920px;
+    }
+
+    .about p:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 72px 0 96px;
+    }
+
+    .contact-card {
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(135deg, rgba(125, 211, 252, 0.12), rgba(192, 132, 252, 0.10)),
+        rgba(255, 255, 255, 0.045);
+      padding: clamp(32px, 6vw, 56px);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card h2 {
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: -0.07em;
+      margin: 0 0 18px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto 30px;
+      font-size: 1.08rem;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 28px 0;
+      color: var(--muted-2);
+      font-size: 0.92rem;
+    }
+
+    .footer-inner {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner a {
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .cards,
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .section-heading p {
+        margin-top: 14px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav {
+        align-items: flex-start;
+        gap: 18px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 56px;
+      }
+
+      .hero-card,
+      .side-card,
+      .project-card,
+      .about,
+      .contact-card {
+        border-radius: 22px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="/">
+        <span class="brand-mark">AP</span>
+        <span>Andrea Prestia</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="https://github.com/AndreaPrestia" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <div class="eyebrow">Senior Software Engineer · Rome, Italy</div>
+
+          <h1>Building reliable software systems.</h1>
+
+          <p class="lead">
+            I design and build backend platforms, enterprise APIs, integrations,
+            cloud-ready architectures, and AI-assisted development workflows.
+          </p>
+
+          <div class="actions">
+            <a class="button primary" href="mailto:andrea@prestia.dev">Contact me</a>
+            <a class="button" href="https://github.com/AndreaPrestia" target="_blank" rel="noreferrer">View GitHub</a>
+            <a class="button" href="#projects">Featured projects</a>
+          </div>
+        </div>
+
+        <aside class="side-card" aria-label="Profile summary">
+          <div>
+            <h2>Software is both my craft and my strongest passion.</h2>
+            <p>
+              I started programming at 13 and began working professionally as a developer at 20.
+              Today I focus on systems that need to be robust, maintainable, and built for real-world business constraints.
+            </p>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>Enterprise software</strong>
+              <span>APIs, integrations, backend systems</span>
+            </div>
+
+            <div class="stat">
+              <strong>Modernization</strong>
+              <span>Legacy codebases, cloud migration, architecture</span>
+            </div>
+
+            <div class="stat">
+              <strong>AI-assisted delivery</strong>
+              <span>Agent workflows, planning, implementation, testing</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="section-heading">
+        <h2>What I work on</h2>
+        <p>
+          I like understanding how systems are designed, how components work together,
+          and how things run under the hood — from application architecture to distributed systems.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Backend systems</h3>
+          <p>
+            Robust services, APIs, business workflows, data access layers, authentication,
+            observability, and production-oriented application design.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag">.NET</span>
+            <span class="tag">APIs</span>
+            <span class="tag">SQL</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Enterprise integrations</h3>
+          <p>
+            Connecting legacy platforms, external services, databases, queues, and internal
+            systems with clean contracts and maintainable architecture.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag">Oracle</span>
+            <span class="tag">SQL Server</span>
+            <span class="tag">Messaging</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>AI-augmented development</h3>
+          <p>
+            I use AI and agent-based workflows as a productivity and quality multiplier,
+            while keeping ownership of architecture, code quality, and technical decisions.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag">Agents</span>
+            <span class="tag">Testing</span>
+            <span class="tag">Automation</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-heading">
+        <h2>Featured projects</h2>
+        <p>
+          A personal hub for the things I build professionally and independently.
+        </p>
+      </div>
+
+      <div class="projects">
+        <a class="project-card" href="https://sniper-soft.com" target="_blank" rel="noreferrer">
+          <div>
+            <div class="project-kicker">Software company</div>
+            <h3>SniperSoft</h3>
+            <p>
+              Specialized software development for companies that need reliable systems,
+              enterprise integrations, backend platforms, and pragmatic technical execution.
+            </p>
+          </div>
+
+          <div class="project-link">Visit sniper-soft.com →</div>
+        </a>
+
+        <a class="project-card" href="https://accanto.care" target="_blank" rel="noreferrer">
+          <div>
+            <div class="project-kicker">Care-tech project</div>
+            <h3>Accanto</h3>
+            <p>
+              A project focused on making caregiving more organized, humane, and accessible
+              through simple digital tools for families and caregivers.
+            </p>
+          </div>
+
+          <div class="project-link">Visit accanto.care →</div>
+        </a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <div class="section-heading">
+          <h2>About</h2>
+          <p>Software engineering, systems thinking, and practical execution.</p>
+        </div>
+
+        <p>
+          Software engineering is my main passion — and I’m lucky it also became my profession.
+          I started programming at 13 with JavaScript and C++, and after a high school focused
+          on software development, I pursued software engineering studies at university in Rome, Italy.
+        </p>
+
+        <p>
+          I began working professionally as a software developer at 20. Since then, I have focused
+          on understanding how software systems are designed, how components work together,
+          and how things run under the hood.
+        </p>
+
+        <p>
+          I’m particularly interested in building reliable backend systems, modernizing legacy codebases,
+          and designing scalable architectures. I use AI-augmented development and agent-based workflows
+          as a productivity and quality multiplier, while keeping full ownership of system design
+          and technical decisions.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="contact-card">
+        <h2>Let’s build something solid.</h2>
+        <p>
+          I’m interested in software projects where reliability, architecture,
+          integrations, and pragmatic delivery matter.
+        </p>
+
+        <div class="actions" style="justify-content: center;">
+          <a class="button primary" href="mailto:andrea@prestia.dev">Get in touch</a>
+          <a class="button" href="https://github.com/AndreaPrestia" target="_blank" rel="noreferrer">GitHub profile</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© <span id="year"></span> Andrea Prestia. Built for prestia.dev.</span>
+      <span>
+        <a href="https://sniper-soft.com" target="_blank" rel="noreferrer">SniperSoft</a>
+        ·
+        <a href="https://accanto.care" target="_blank" rel="noreferrer">Accanto</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
