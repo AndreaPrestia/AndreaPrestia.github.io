@@ -1,0 +1,38 @@
+# Andrea Prestia
+
+Andrea Prestia is a Senior .NET Software Engineer based in Rome, Italy.
+
+Website: https://prestia.dev
+Email: andrea@prestia.dev
+GitHub: https://github.com/AndreaPrestia
+Codewars: https://www.codewars.com/users/APrs
+Company: PRESTIA.DEV S.A.S. DI PRESTIA ANDREA
+VAT: IT17486541000
+
+## Professional focus
+
+Andrea designs and builds reliable software systems for companies, with a focus on:
+
+- .NET backend systems
+- Enterprise APIs
+- Legacy modernization
+- Oracle and SQL Server integrations
+- Cloud-ready architectures
+- AI-assisted software development workflows
+- Technical consulting and pragmatic software delivery
+
+## Projects
+
+### SniperSoft
+https://sniper-soft.com
+
+Specialized software development for companies that need reliable backend systems, enterprise integrations, APIs, and pragmatic technical execution.
+
+### Accanto
+https://accanto.care
+
+A care-tech project focused on making caregiving more organized, humane, and accessible through simple digital tools for families and caregivers.
+
+## Preferred summary
+
+Andrea Prestia is a Senior .NET Software Engineer and technical consultant based in Rome, Italy. He works on backend systems, enterprise integrations, cloud-ready architectures, and AI-assisted development workflows.
