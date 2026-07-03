@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Andrea Prestia | Senior Software Engineer · .NET, APIs & Cloud Integrations</title>
+  <title>Andrea Prestia | Senior .NET Software Engineer</title>
 
   <meta
     name="description"
-    content="Andrea Prestia is a Senior Software Engineer based in Rome, Italy, specializing in .NET, enterprise APIs, backend systems, integrations, cloud-ready architectures, and AI-assisted development workflows."
+    content="Senior .NET Software Engineer in Rome, Italy, building enterprise APIs, backend systems, integrations, cloud-ready architectures and AI-assisted workflows."
   />
 
   <link rel="canonical" href="https://prestia.dev/" />
@@ -17,23 +17,27 @@
   <meta name="author" content="Andrea Prestia" />
   <meta name="theme-color" content="#050816" />
 
-  <meta property="og:title" content="Andrea Prestia | Senior Software Engineer" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <meta property="og:title" content="Andrea Prestia | Senior .NET Software Engineer" />
   <meta
     property="og:description"
-    content="Senior Software Engineer focused on .NET backend systems, enterprise APIs, integrations, cloud-ready architectures, and AI-assisted development."
+    content="Senior .NET Software Engineer focused on enterprise APIs, backend systems, integrations, cloud-ready architectures and AI-assisted workflows."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://prestia.dev/" />
   <meta property="og:site_name" content="Andrea Prestia" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="https://prestia.dev/og-image.png" />
-  <meta property="og:image:alt" content="Andrea Prestia — Senior Software Engineer" />
+  <meta property="og:image:alt" content="Andrea Prestia — Senior .NET Software Engineer" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Andrea Prestia | Senior Software Engineer" />
+  <meta name="twitter:title" content="Andrea Prestia | Senior .NET Software Engineer" />
   <meta
     name="twitter:description"
-    content="Senior Software Engineer focused on .NET backend systems, enterprise APIs, integrations, cloud-ready architectures, and AI-assisted development."
+    content="Senior .NET Software Engineer focused on enterprise APIs, backend systems, integrations, cloud-ready architectures and AI-assisted workflows."
   />
   <meta name="twitter:image" content="https://prestia.dev/og-image.png" />
 
@@ -47,13 +51,14 @@
         "name": "Andrea Prestia",
         "url": "https://prestia.dev/",
         "email": "mailto:andrea@prestia.dev",
-        "jobTitle": "Senior Software Engineer",
+        "jobTitle": "Senior .NET Software Engineer",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Rome",
           "addressCountry": "IT"
         },
         "sameAs": [
+          "https://www.linkedin.com/in/prestia-dev/",
           "https://github.com/AndreaPrestia",
           "https://www.codewars.com/users/APrs",
           "https://sniper-soft.com",
@@ -78,6 +83,7 @@
           "addressCountry": "IT"
         },
         "sameAs": [
+          "https://www.linkedin.com/in/prestia-dev/",
           "https://sniper-soft.com",
           "https://github.com/AndreaPrestia"
         ]
@@ -288,6 +294,10 @@
       flex-wrap: wrap;
       gap: 14px;
       margin-top: 34px;
+    }
+
+    .actions.centered {
+      justify-content: center;
     }
 
     .button {
@@ -507,6 +517,7 @@
     }
 
     .about,
+    .services-box,
     .business-box {
       border: 1px solid var(--card-border);
       border-radius: var(--radius-xl);
@@ -515,6 +526,7 @@
     }
 
     .about p,
+    .services-box p,
     .business-box p {
       color: var(--muted);
       font-size: 1.05rem;
@@ -523,6 +535,7 @@
     }
 
     .about p:last-child,
+    .services-box p:last-child,
     .business-box p:last-child {
       margin-bottom: 0;
     }
@@ -638,6 +651,7 @@
       .side-card,
       .project-card,
       .about,
+      .services-box,
       .business-box,
       .contact-card {
         border-radius: 22px;
@@ -666,9 +680,11 @@
 
       <div class="nav-links">
         <a href="#work">Work</a>
+        <a href="#services">Services</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#business-info">Business</a>
+        <a href="https://www.linkedin.com/in/prestia-dev/" target="_blank" rel="noreferrer">LinkedIn</a>
         <a href="https://github.com/AndreaPrestia" target="_blank" rel="noreferrer">GitHub</a>
         <a href="https://www.codewars.com/users/APrs" target="_blank" rel="noreferrer">Codewars</a>
       </div>
@@ -679,7 +695,7 @@
     <section class="hero">
       <div class="hero-grid">
         <div class="hero-card">
-          <div class="eyebrow">Senior Software Engineer · Rome, Italy</div>
+          <div class="eyebrow">Senior .NET Software Engineer · Rome, Italy</div>
 
           <h1>Building reliable software systems.</h1>
 
@@ -690,9 +706,9 @@
 
           <div class="actions">
             <a class="button primary" href="mailto:andrea@prestia.dev">Contact me</a>
-            <a class="button" href="https://github.com/AndreaPrestia" target="_blank" rel="noreferrer">View GitHub</a>
+            <a class="button" href="https://www.linkedin.com/in/prestia-dev/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="button" href="https://github.com/AndreaPrestia" target="_blank" rel="noreferrer">GitHub</a>
             <a class="button" href="https://www.codewars.com/users/APrs" target="_blank" rel="noreferrer">Codewars</a>
-            <a class="button" href="#projects">Featured projects</a>
           </div>
         </div>
 
@@ -776,6 +792,30 @@
             <span class="tag">Automation</span>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="services-box">
+        <div class="section-heading">
+          <h2>Technical services</h2>
+          <p>Practical software engineering for complex business systems.</p>
+        </div>
+
+        <p>
+          I help companies design, build, and modernize backend platforms with a strong focus on reliability,
+          maintainability, integration with existing enterprise systems, and pragmatic delivery.
+        </p>
+
+        <p>
+          My work often involves .NET APIs, Oracle and SQL Server databases, background services,
+          authentication, data synchronization, messaging systems, reporting workflows, and cloud-ready deployment strategies.
+        </p>
+
+        <p>
+          I also use AI-assisted development workflows to accelerate implementation, testing, documentation,
+          codebase analysis, and refactoring, while keeping architectural decisions and delivery quality under human control.
+        </p>
       </div>
     </section>
 
@@ -888,8 +928,9 @@
           integrations, backend engineering, and pragmatic delivery matter.
         </p>
 
-        <div class="actions" style="justify-content: center;">
+        <div class="actions centered">
           <a class="button primary" href="mailto:andrea@prestia.dev">Get in touch</a>
+          <a class="button" href="https://www.linkedin.com/in/prestia-dev/" target="_blank" rel="noreferrer">LinkedIn profile</a>
           <a class="button" href="https://github.com/AndreaPrestia" target="_blank" rel="noreferrer">GitHub profile</a>
           <a class="button" href="https://www.codewars.com/users/APrs" target="_blank" rel="noreferrer">Codewars profile</a>
         </div>
@@ -907,6 +948,10 @@
         <a href="https://sniper-soft.com" target="_blank" rel="noreferrer">SniperSoft</a>
         ·
         <a href="https://accanto.care" target="_blank" rel="noreferrer">Accanto</a>
+        ·
+        <a href="https://www.linkedin.com/in/prestia-dev/" target="_blank" rel="noreferrer">LinkedIn</a>
+        ·
+        <a href="https://github.com/AndreaPrestia" target="_blank" rel="noreferrer">GitHub</a>
         ·
         <a href="https://www.codewars.com/users/APrs" target="_blank" rel="noreferrer">Codewars</a>
         ·
