@@ -413,22 +413,52 @@
       color: var(--white);
     }
 
-    .about {
+    .about,
+    .business-box {
       border: 1px solid var(--card-border);
       border-radius: var(--radius-xl);
       background: rgba(255, 255, 255, 0.045);
       padding: clamp(28px, 5vw, 48px);
     }
 
-    .about p {
+    .about p,
+    .business-box p {
       color: var(--muted);
       font-size: 1.05rem;
       margin: 0 0 18px;
       max-width: 920px;
     }
 
-    .about p:last-child {
+    .about p:last-child,
+    .business-box p:last-child {
       margin-bottom: 0;
+    }
+
+    .business-details {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .business-item {
+      padding: 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .business-item span {
+      display: block;
+      color: var(--muted-2);
+      font-size: 0.86rem;
+      margin-bottom: 4px;
+    }
+
+    .business-item strong,
+    .business-item a {
+      color: var(--white);
+      font-weight: 800;
     }
 
     .contact {
@@ -483,7 +513,8 @@
     @media (max-width: 900px) {
       .hero-grid,
       .cards,
-      .projects {
+      .projects,
+      .business-details {
         grid-template-columns: 1fr;
       }
 
@@ -514,6 +545,7 @@
       .side-card,
       .project-card,
       .about,
+      .business-box,
       .contact-card {
         border-radius: 22px;
       }
@@ -541,6 +573,7 @@
         <a href="#work">Work</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
+        <a href="#business-info">Business</a>
         <a href="https://github.com/AndreaPrestia" target="_blank" rel="noreferrer">GitHub</a>
       </div>
     </nav>
@@ -714,6 +747,42 @@
       </div>
     </section>
 
+    <section id="business-info">
+      <div class="business-box">
+        <div class="section-heading">
+          <h2>Business information</h2>
+          <p>Professional and company details.</p>
+        </div>
+
+        <p>
+          Andrea Prestia operates through an Italian company focused on software development,
+          enterprise integrations, backend systems, cloud-ready architectures, and technical consulting.
+        </p>
+
+        <div class="business-details">
+          <div class="business-item">
+            <span>Company</span>
+            <strong>PRESTIA.DEV S.A.S DI PRESTIA ANDREA</strong>
+          </div>
+
+          <div class="business-item">
+            <span>VAT / P.IVA</span>
+            <strong>IT17486541000</strong>
+          </div>
+
+          <div class="business-item">
+            <span>Registered office</span>
+            <strong>Viale Bruno Rizzieri 199C, 00173, Rome, Italy</strong>
+          </div>
+
+          <div class="business-item">
+            <span>Email</span>
+            <a href="mailto:andrea@prestia.dev">andrea@prestia.dev</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="contact">
       <div class="contact-card">
         <h2>Let’s build something solid.</h2>
@@ -732,11 +801,16 @@
 
   <footer>
     <div class="footer-inner">
-      <span>© <span id="year"></span> Andrea Prestia. Built for prestia.dev.</span>
+      <span>
+        © <span id="year"></span> PRESTIA.DEV S.A.S. DI PRESTIA ANDREA · IT17486541000 · Viale Bruno Rizzieri 199C, 00173, Rome, Italy
+      </span>
+
       <span>
         <a href="https://sniper-soft.com" target="_blank" rel="noreferrer">SniperSoft</a>
         ·
         <a href="https://accanto.care" target="_blank" rel="noreferrer">Accanto</a>
+        ·
+        <a href="mailto:andrea@prestia.dev">Email</a>
       </span>
     </div>
   </footer>
